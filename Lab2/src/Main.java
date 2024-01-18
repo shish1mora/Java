@@ -1,21 +1,13 @@
+
 public class Main {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int n = 5;
-        int[] lastNElements = getLast(array, n);
-        for (int num : lastNElements) {
-            System.out.print(num + " ");
-        }
-    }
-    public static int[] getLast(int[] array, int n) {
-        if (n > array.length) {
-            n = array.length;
-        }
-        int[] resultArray = new int[n];
-        int startIndex = array.length - n;
-        for (int i = 0; i < n; i++) {
-            resultArray[i] = array[startIndex + i];
-        }
-        return resultArray;
+        Product product1 = new Product("Apple", 1.5, 10);
+        Product product2 = new Product("Banana", 2.0, 15);
+
+        Store store = new Store("Supermarket", "123 Main St");
+        store.addProduct(product1);
+        store.addProduct(product2);
+
+        System.out.println(store);
     }
 }
